@@ -200,6 +200,9 @@ body {
 .hero {
     min-height: 100vh;
     background: linear-gradient(135deg, var(--secondary-color) 0%, #334155 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     position: relative;
@@ -212,8 +215,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-    opacity: 0.5;
+    background: rgba(30, 41, 59, 0.7);
+    z-index: 0;
 }
 
 .hero-content {
@@ -259,8 +262,8 @@ body {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
     align-items: start;
 }
 
@@ -276,18 +279,27 @@ body {
     margin-bottom: 20px;
 }
 
+.owner-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: var(--shadow-lg);
+    border: 4px solid var(--primary-color);
+}
+
 .avatar-placeholder {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     color: var(--white);
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     border-radius: 50%;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow);
 }
 
 .owner-info h3 {
@@ -314,48 +326,48 @@ body {
     line-height: 1.8;
 }
 
-.shop-info {
-    padding: 20px;
+/* Co-Owners Section */
+.co-owners {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
 }
 
-.shop-info h3 {
-    font-size: 1.8rem;
+.co-owners h3 {
+    font-size: 1.5rem;
     color: var(--secondary-color);
     margin-bottom: 30px;
+    text-align: center;
 }
 
-.features-list {
-    list-style: none;
+.co-owners-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
-.features-list li {
-    padding: 15px 0;
-    padding-left: 35px;
-    position: relative;
-    border-bottom: 1px solid var(--border-color);
+.co-owner {
+    text-align: center;
+    padding: 20px;
+    background: var(--light-bg);
+    border-radius: 12px;
+}
+
+.co-owner-avatar {
+    margin-bottom: 15px;
+}
+
+.co-owner-name {
     font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
 }
 
-.features-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background: var(--primary-color);
-    border-radius: 50%;
-}
-
-.features-list li::after {
-    content: '✓';
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--white);
-    font-size: 0.8rem;
+.co-owner-title {
+    font-size: 0.9rem;
+    color: var(--light-text);
 }
 
 /* Services Section */
