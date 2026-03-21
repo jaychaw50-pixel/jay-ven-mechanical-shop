@@ -571,10 +571,18 @@ body {
 .map-placeholder {
     background: linear-gradient(135deg, var(--secondary-color), #334155);
     border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    position: relative;
     min-height: 400px;
+    overflow: hidden;
+}
+
+.map-placeholder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .map-content {
@@ -991,7 +999,7 @@ body {
     }
 
     .map-placeholder {
-        min-height: 250px;
+        min-height: 300px;
     }
     
     /* Contact section - key mobile fix */
