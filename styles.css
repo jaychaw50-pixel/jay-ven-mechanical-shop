@@ -1149,11 +1149,27 @@ body {
     }
 
     .parts-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
 
     .part-image {
-        height: 150px;
+        height: 90px;
+    }
+
+    .part-card {
+        padding: 10px;
+    }
+
+    .part-card h3 {
+        font-size: 0.8rem;
+    }
+
+    .part-brand {
+        font-size: 0.7rem;
+    }
+
+    .part-price {
+        font-size: 0.85rem;
     }
 }
