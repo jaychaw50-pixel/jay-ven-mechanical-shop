@@ -30,12 +30,14 @@ body {
     color: var(--dark-text);
     background-color: var(--white);
     overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    width: 100%;
 }
 
 /* Navigation */
@@ -44,6 +46,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     background-color: var(--white);
     box-shadow: var(--shadow);
     z-index: 1000;
@@ -60,6 +63,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .logo-icon {
@@ -73,6 +77,7 @@ body {
     justify-content: center;
     font-weight: 700;
     font-size: 1.1rem;
+    flex-shrink: 0;
 }
 
 .logo-text {
@@ -119,6 +124,7 @@ body {
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -140,6 +146,7 @@ body {
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    text-align: center;
 }
 
 .btn-primary {
@@ -204,11 +211,11 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     position: relative;
     padding-top: 80px;
+    width: 100%;
 }
 
 .hero-overlay {
@@ -228,6 +235,7 @@ body {
     color: var(--white);
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 .hero-content h1 {
@@ -235,6 +243,8 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-subtitle {
@@ -297,6 +307,7 @@ body {
     justify-content: center;
     border: 5px solid var(--primary-color);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
 }
 
 .owner-img {
@@ -408,40 +419,46 @@ body {
 
 .part-card {
     background: var(--white);
-    border-radius: 12px;
-    padding: 25px;
+    border-radius: 16px;
+    padding: 20px;
     text-align: center;
     box-shadow: var(--shadow);
     transition: all 0.3s;
     border: 1px solid var(--border-color);
+    overflow: hidden;
 }
 
 .part-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
 }
 
 .part-image {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
     background: var(--light-bg);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
 }
 
-.part-image svg {
-    width: 40px;
-    height: 40px;
-    color: var(--primary-color);
+.part-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.part-card:hover .part-image img {
+    transform: scale(1.05);
 }
 
 .part-card h3 {
     font-size: 1.1rem;
     color: var(--secondary-color);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .part-brand {
@@ -451,20 +468,9 @@ body {
 }
 
 .part-price {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.part-badge {
-    display: inline-block;
-    padding: 5px 12px;
-    background: var(--success);
-    color: var(--white);
-    font-size: 0.75rem;
-    font-weight: 600;
-    border-radius: 20px;
 }
 
 .parts-note {
@@ -514,6 +520,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    flex-shrink: 0;
 }
 
 .location-icon svg, .hours-icon svg {
@@ -543,6 +550,8 @@ body {
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .hours-list li:last-child {
@@ -571,7 +580,7 @@ body {
 .map-content {
     text-align: center;
     color: var(--white);
-    padding: 40px;
+    padding: 40px 20px;
 }
 
 .map-content svg {
@@ -599,7 +608,7 @@ body {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 40px;
 }
 
 .contact-info {
@@ -610,13 +619,14 @@ body {
 
 .contact-card {
     background: var(--white);
-    padding: 30px;
+    padding: 25px;
     border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 20px;
     box-shadow: var(--shadow);
     transition: all 0.3s;
+    overflow: hidden;
 }
 
 .contact-card:hover {
@@ -625,8 +635,9 @@ body {
 }
 
 .contact-icon {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -635,8 +646,8 @@ body {
 }
 
 .contact-icon svg {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     color: var(--white);
 }
 
@@ -652,21 +663,28 @@ body {
     background: var(--accent-color);
 }
 
+.contact-text {
+    min-width: 0;
+    overflow: hidden;
+}
+
 .contact-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--secondary-color);
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 .contact-detail {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--light-text);
 }
 
 .contact-value {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: var(--dark-text);
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .contact-form-wrapper {
@@ -704,6 +722,7 @@ body {
     font-family: inherit;
     font-size: 1rem;
     transition: border-color 0.3s;
+    max-width: 100%;
 }
 
 .form-group input:focus,
@@ -783,7 +802,10 @@ body {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
+/* ===================== */
+/* Responsive Design     */
+/* ===================== */
+
 @media (max-width: 1024px) {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -795,6 +817,10 @@ body {
     
     .about-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        gap: 30px;
     }
 }
 
@@ -819,7 +845,7 @@ body {
     
     .nav-links {
         position: fixed;
-        top: 60px;
+        top: 58px;
         left: 0;
         right: 0;
         background: var(--white);
@@ -829,6 +855,7 @@ body {
         box-shadow: var(--shadow);
         transform: translateY(-150%);
         transition: transform 0.3s;
+        z-index: 999;
     }
     
     .nav-links.active {
@@ -838,76 +865,242 @@ body {
     .hamburger {
         display: flex;
     }
+
+    /* Hero mobile fix */
+    .hero {
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 100px 0 60px;
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        padding: 20px 10px;
+    }
     
     .hero-content h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        line-height: 1.25;
+        padding: 0 5px;
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+
+    .hero-location {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
     }
     
     .section-title {
         font-size: 1.6rem;
+        padding: 0 10px 15px;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+        padding: 0 10px;
+        margin-bottom: 35px;
     }
     
-    .about-grid,
-    .location-content,
-    .contact-grid {
+    /* About section */
+    .about {
+        padding: 60px 0;
+    }
+
+    .about-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .owner-card {
+        padding: 30px 20px;
+    }
+
+    .owner-avatar {
+        width: 120px;
+        height: 120px;
     }
     
+    /* Services section */
+    .services {
+        padding: 60px 0;
+    }
+
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
     }
     
+    /* Parts section */
+    .parts {
+        padding: 60px 0;
+    }
+
     .parts-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .part-card {
+        padding: 15px;
+    }
+
+    .part-image {
+        height: 120px;
+        border-radius: 10px;
+    }
+
+    .part-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .part-brand {
+        font-size: 0.8rem;
+    }
+
+    .part-price {
+        font-size: 1rem;
+    }
+
+    /* Location section */
+    .location {
+        padding: 60px 0;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .map-placeholder {
+        min-height: 250px;
     }
     
+    /* Contact section - key mobile fix */
+    .contact {
+        padding: 60px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-card {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .contact-card:hover {
+        transform: none;
+    }
+
+    .contact-icon {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+        border-radius: 10px;
+    }
+
+    .contact-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .contact-card h3 {
+        font-size: 1rem;
+    }
+
+    .contact-detail {
+        font-size: 0.8rem;
+    }
+
+    .contact-value {
+        font-size: 0.85rem;
+    }
+
+    /* Form mobile fix */
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .contact-form h3 {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 40px 0 20px;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
-    }
-    
-    .contact-card {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .contact-icon {
-        width: 50px;
-        height: 50px;
+        gap: 30px;
     }
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
     }
     
     .parts-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 12px;
     }
     
     .part-card {
-        padding: 15px;
+        padding: 12px;
     }
-    
+
     .part-image {
-        width: 60px;
-        height: 60px;
-    }
-    
-    .part-image svg {
-        width: 30px;
-        height: 30px;
+        height: 100px;
+        border-radius: 8px;
     }
     
     .part-card h3 {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
     }
     
     .part-brand {
@@ -915,16 +1108,52 @@ body {
     }
     
     .part-price {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
-    
-    .hero-buttons {
+
+    .about-grid {
+        gap: 15px;
+    }
+
+    .owner-card {
+        padding: 25px 15px;
+    }
+
+    .owner-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .owner-info h3 {
+        font-size: 1.15rem;
+    }
+
+    .contact-form-wrapper {
+        padding: 20px 15px;
+    }
+
+    .hours-list li {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+        gap: 2px;
     }
-    
-    .btn {
-        width: 100%;
-        max-width: 250px;
+}
+
+@media (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .parts-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .part-image {
+        height: 150px;
     }
 }
