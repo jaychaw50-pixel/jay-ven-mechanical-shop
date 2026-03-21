@@ -853,6 +853,37 @@ body {
         font-size: 2rem;
     }
     
+    .parts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .part-card {
+        padding: 15px;
+    }
+    
+    .part-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .part-image svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .part-card h3 {
+        font-size: 0.95rem;
+    }
+    
+    .part-brand {
+        font-size: 0.75rem;
+    }
+    
+    .part-price {
+        font-size: 1rem;
+    }
+    
     .hero-buttons {
         flex-direction: column;
         align-items: center;
