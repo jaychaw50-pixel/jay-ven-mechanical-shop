@@ -37,7 +37,7 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--bg-white);
+    background-color: #FFFFFF;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
@@ -60,14 +60,14 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
 .logo { display: flex; align-items: center; gap: 12px; }
 .logo-icon {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: var(--bg-white); width: 48px; height: 48px; border-radius: 12px;
+    color: #FFFFFF; width: 48px; height: 48px; border-radius: 12px;
     display: flex; align-items: center; justify-content: center;
     font-weight: 800; font-size: 1.25rem; font-family: var(--font-heading);
     box-shadow: var(--shadow-glow);
 }
 .logo-text { font-size: 1.5rem; font-weight: 800; color: var(--secondary); font-family: var(--font-heading); letter-spacing: -0.01em;}
 
-.nav-links { display: flex; list-style: none; gap: 36px; }
+.nav-links { display: flex; list-style: none; gap: 36px; margin-right: 20px; }
 .nav-links a {
     text-decoration: none; color: var(--text-muted); font-weight: 500; font-size: 0.95rem;
     position: relative; transition: var(--transition); padding: 8px 0;
@@ -91,13 +91,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
 }
 .btn-primary {
     background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: var(--bg-white); box-shadow: var(--shadow-glow);
+    color: #FFFFFF; box-shadow: var(--shadow-glow);
 }
 .btn-primary:hover {
     transform: translateY(-2px); box-shadow: 0 12px 24px rgba(230, 57, 70, 0.4);
 }
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.1); color: var(--bg-white);
+    background: rgba(255, 255, 255, 0.1); color: #FFFFFF;
     backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2);
 }
 .btn-secondary:hover { background: var(--bg-white); color: var(--secondary); }
@@ -125,7 +125,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
     background: linear-gradient(135deg, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.6) 100%); z-index: 0;
 }
 .hero-content {
-    position: relative; z-index: 1; text-align: center; color: var(--bg-white);
+    position: relative; z-index: 1; text-align: center; color: #FFFFFF;
     max-width: 800px; margin: 0 auto; padding: 20px 0;
     animation: fadeUp 1s ease forwards; opacity: 0; transform: translateY(30px);
 }
@@ -175,7 +175,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
     display: flex; align-items: center; justify-content: center; margin-bottom: 30px;
     transition: var(--transition); border: 1px solid var(--border-soft);
 }
-.service-card:hover .service-icon { background: var(--primary); color: var(--bg-white); transform: scale(1.1) rotate(-5deg); box-shadow: var(--shadow-glow); border-color: transparent;}
+.service-card:hover .service-icon { background: var(--primary); color: #FFFFFF; transform: scale(1.1) rotate(-5deg); box-shadow: var(--shadow-glow); border-color: transparent;}
 .service-icon svg { width: 36px; height: 36px; stroke-width: 2; transition: var(--transition); }
 .service-card h3 { font-size: 1.4rem; color: var(--secondary); margin-bottom: 16px; }
 .service-card p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
@@ -240,7 +240,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
 .contact-card:hover { transform: translateX(12px); box-shadow: var(--shadow-md); border-color: var(--primary); }
 .contact-icon {
     width: 64px; height: 64px; min-width: 64px; border-radius: 16px;
-    display: flex; align-items: center; justify-content: center; color: var(--bg-white); box-shadow: var(--shadow-md);
+    display: flex; align-items: center; justify-content: center; color: #FFFFFF; box-shadow: var(--shadow-md);
 }
 .contact-icon svg { width: 28px; height: 28px; stroke-width: 2; }
 .contact-icon.phone { background: linear-gradient(135deg, #10B981, #059669); }
@@ -267,9 +267,9 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
 /* Footer */
 .footer { background: #0B1120; color: #94A3B8; padding: 80px 0 24px; border-top: 4px solid var(--primary); }
 .footer-content { display: grid; grid-template-columns: 2.5fr 1fr 1.5fr; gap: 60px; margin-bottom: 60px; }
-.footer-logo { font-size: 2.2rem; font-weight: 800; display: block; margin-bottom: 20px; color: var(--bg-white); font-family: var(--font-heading); letter-spacing: -0.02em; }
+.footer-logo { font-size: 2.2rem; font-weight: 800; display: block; margin-bottom: 20px; color: #FFFFFF; font-family: var(--font-heading); letter-spacing: -0.02em; }
 .footer-brand p { color: #94A3B8; line-height: 1.8; font-size: 1.05rem; max-width: 400px; }
-.footer-links h4, .footer-contact h4 { font-size: 1.3rem; margin-bottom: 24px; color: var(--bg-white); font-family: var(--font-heading); font-weight: 600; }
+.footer-links h4, .footer-contact h4 { font-size: 1.3rem; margin-bottom: 24px; color: #FFFFFF; font-family: var(--font-heading); font-weight: 600; }
 .footer-links ul { list-style: none; }
 .footer-links li { margin-bottom: 12px; }
 .footer-links a { color: #94A3B8; text-decoration: none; transition: var(--transition); font-weight: 500; }
@@ -341,6 +341,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
     --bg-white: #0F172A;
     --text-dark: #F8FAFC;
     --text-muted: #94A3B8;
+    --secondary: #E2E8F0;
     --border-soft: #1E293B;
     --glass-bg: rgba(15, 23, 42, 0.85);
     --glass-border: rgba(30, 41, 59, 0.5);
@@ -369,7 +370,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
     transition: var(--transition); border: 1px solid rgba(59, 130, 246, 0.2);
 }
 .btn-part-contact:hover {
-    background: #3B82F6; color: var(--bg-white); transform: translateY(-2px);
+    background: #3B82F6; color: #FFFFFF; transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); border-color: #3B82F6;
 }
 
@@ -381,4 +382,15 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; let
 @media (max-width: 768px) {
     .nav-theme-toggle { margin-left: 0; }
     .contact-info { flex-direction: column; }
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-left: auto;
+}
+@media (max-width: 768px) {
+    .nav-links { margin-right: 0; }
+    .theme-toggle { padding: 4px; }
 }
